@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.example.structure.dddclassicmultimodule</groupId>
+        <artifactId>ddd-classic-multi-module</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>adapter</artifactId>
+    <name>adapter</name>
+    <description>唯一可执行模块：web/mq/job/config 适配器、可执行 jar</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.example.structure.dddclassicmultimodule</groupId>
+            <artifactId>api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.example.structure.dddclassicmultimodule</groupId>
+            <artifactId>core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.example.structure.dddclassicmultimodule</groupId>
+            <artifactId>model</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.example.structure.dddclassicmultimodule</groupId>
+            <artifactId>common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.example.structure.dddclassicmultimodule</groupId>
+            <artifactId>biz</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.example.structure.dddclassicmultimodule</groupId>
+            <artifactId>dal-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.example.structure.dddclassicmultimodule</groupId>
+            <artifactId>integration</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.example.structure.dddclassicmultimodule</groupId>
+            <artifactId>dal-impl</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.example.structure.dddclassicmultimodule</groupId>
+            <artifactId>dal-mock</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.example.structure.multibizmodule</groupId>
+        <artifactId>mvc-classic-multi-biz-module</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>salary-biz</artifactId>
+    <name>salary-biz</name>
+    <description>薪资域业务实现：只依赖 user-api/org-api/salary-api，不依赖其他 biz</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.example.structure.multibizmodule</groupId>
+            <artifactId>salary-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.example.structure.multibizmodule</groupId>
+            <artifactId>user-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.example.structure.multibizmodule</groupId>
+            <artifactId>org-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.example.structure.multibizmodule</groupId>
+            <artifactId>common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
+</project>

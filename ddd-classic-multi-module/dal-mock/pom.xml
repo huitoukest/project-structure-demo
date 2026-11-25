@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.example.structure.dddclassicmultimodule</groupId>
+        <artifactId>ddd-classic-multi-module</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>dal-mock</artifactId>
+    <name>dal-mock</name>
+    <description>联调替身数据访问：独立包 + 独立 bean 名（demo.dal.mode=mock，类级条件）</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.example.structure.dddclassicmultimodule</groupId>
+            <artifactId>dal-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.example.structure.dddclassicmultimodule</groupId>
+            <artifactId>common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+    </dependencies>
+</project>
